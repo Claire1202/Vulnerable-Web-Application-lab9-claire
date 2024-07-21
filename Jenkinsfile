@@ -1,16 +1,23 @@
 pipeline {
     agent any
     stages {
-        stage ('Checkout') {
+        stage('Checkout') {
             steps {
-                git branch:'master', url: 'https://github.com/OWASP/Vulnerable-Web-Application.git'
+                git branch: 'master', url: 'https://github.com/OWASP/Vulnerable-Web-Application.git'
             }
         }
-        stage('Verify Node.js') {
+        stage('Install Node.js Modules') {
             steps {
-                sh 'node -v'
-                sh 'echo "console.log(\\"Node.js is working\\")" > test.js'
-                sh 'node test.js'
+                sh 'npm install is-number'
+                sh 'npm install to-regex-range'
+                sh 'npm install fill-range'
+                sh 'npm install braces'
+                sh 'npm install micromatch'
+                sh 'npm install fast-glob'
+                sh 'npm install globby'
+                sh 'npm install @typescript-eslint/typescript-estree'
+                sh 'npm install @typescript-eslint/type-utils'
+                sh 'npm install @typescript-eslint/eslint-plugin'
             }
         }
         stage('Code Quality Check via SonarQube') {
