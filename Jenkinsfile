@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    environment {
+        NODE_HOME = '/usr/bin'
+        PATH = "${NODE_HOME}:${env.PATH}"
+    }
     stages {
         stage('Checkout') {
             steps {
@@ -8,7 +12,7 @@ pipeline {
         }
         stage('Install Node.js Modules') {
             steps {
-                sh '/usr/bin/npm install'
+                sh 'npm install'
             }
         }
         stage('Code Quality Check via SonarQube') {
