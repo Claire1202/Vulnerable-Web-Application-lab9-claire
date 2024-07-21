@@ -17,8 +17,6 @@ pipeline {
                             -Dsonar.sources=. \
                             -Dsonar.host.url=http://192.168.1.209:9000 \
                             -Dsonar.token=sqp_3ffd9aaf57d34e57e08b7d4df6fbfe41540d785c \
-                            -Dsonar.ws.timeout=600 \
-                            -Dsonar.ce.task.timeout=600
                         """
                     }
                 }
