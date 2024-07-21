@@ -21,7 +21,7 @@ pipeline {
                             -Dsonar.projectKey=OWASP \
                             -Dsonar.sources=. \
                             -Dsonar.host.url=http://192.168.1.209:9000 \
-                            -Dsonar.token=sqp_3ffd9aaf57d34e57e08b7d4df6fbfe41540d785c \
+                            -Dsonar.token=sqp_f2fd6f36f0696b3fe3efc1e5aea40a63de0fefa0 \
                             -Dsonar.nodejs.executable=/usr/bin/node \
                         """
                     }
