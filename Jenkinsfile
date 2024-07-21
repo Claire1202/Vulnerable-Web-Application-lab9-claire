@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Clean Workspace') {
-            steps {
-                cleanWs()
-            }
-        }
         stage('Checkout') {
             steps {
                 git branch: 'master', url: 'https://github.com/OWASP/Vulnerable-Web-Application.git'
@@ -27,9 +22,7 @@ pipeline {
                             -Dsonar.sources=. \
                             -Dsonar.host.url=http://192.168.1.209:9000 \
                             -Dsonar.token=sqp_f2fd6f36f0696b3fe3efc1e5aea40a63de0fefa0 \
-                            -Dsonar.nodejs.executable=/usr/bin/node \
-                            -Dsonar.ws.timeout=600 \
-                            -Dsonar.ce.task.timeout=600
+                            -Dsonar.nodejs.executable=/usr/bin/node
                         """
                     }
                 }
