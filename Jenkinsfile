@@ -16,7 +16,7 @@ pipeline {
                             -Dsonar.projectKey=OWASP \
                             -Dsonar.sources=. \
                             -Dsonar.host.url=http://192.168.1.209:9000 \
-                            -Dsonar.token=sqp_fd84b03267436623a75d380ce5b69eccfdd7d8c7 \
+                            -Dsonar.token=sqp_3ffd9aaf57d34e57e08b7d4df6fbfe41540d785c \
                             -Dsonar.ws.timeout=600 \
                             -Dsonar.ce.task.timeout=600
                         """
