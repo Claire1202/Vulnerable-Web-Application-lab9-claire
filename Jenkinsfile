@@ -22,7 +22,7 @@ pipeline {
                     def scannerHome = tool 'SonarQube';
                     withSonarQubeEnv('SonarQube') {
                         // Use the correct path to your Node.js executable
-                        def nodePath = 'C:\\\\Program Files\\\\nodejs\\\\node.exe'
+                        def nodePath = 'C:/Program Files/nodejs/node.exe'
                         sh "${scannerHome}/bin/sonar-scanner \
                             -Dsonar.projectKey=OWASP \
                             -Dsonar.sources=. \
