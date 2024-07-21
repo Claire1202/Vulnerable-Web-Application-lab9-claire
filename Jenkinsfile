@@ -10,11 +10,7 @@ pipeline {
                 git branch: 'master', url: 'https://github.com/OWASP/Vulnerable-Web-Application.git'
             }
         }
-        stage('Install Node.js Modules') {
-            steps {
-                sh 'npm install'
-            }
-        }
+        // Skipping the 'Install Node.js Modules' stage since there's no package.json file
         stage('Code Quality Check via SonarQube') {
             steps {
                 script {
